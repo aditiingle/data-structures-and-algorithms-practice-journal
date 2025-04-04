@@ -8,5 +8,4 @@ This repository contains my solutions to various LeetCode problems, categorized 
 - `hard/`: Problems with hard difficulty.
 - `utils/`: Helper code like ListNode, TreeNode classes.
 
-## Goal
-To improve problem-solving skills and prepare for technical interviews.
+
