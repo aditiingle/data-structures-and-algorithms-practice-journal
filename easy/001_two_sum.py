@@ -34,7 +34,6 @@ def two_sum(nums, target):
     return []  # Return empty list if no solution is found
 
 
-# Example usage (like main() in C++)
 nums = [4, 2, 7, 11, 15]
 target = 19
 result = two_sum(nums, target)
