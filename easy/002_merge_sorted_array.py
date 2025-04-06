@@ -1,18 +1,18 @@
-""" You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively.
+""" Given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively.
 
 Merge nums1 and nums2 into a single array sorted in non-decreasing order.
 
-The final sorted array should not be returned by the function, but instead be stored inside the array nums1. To accommodate this, nums1 has a length of m + n, where the first m elements denote the elements that should be merged, and the last n elements are set to 0 and should be ignored. nums2 has a length of n. """
+The final sorted array shouldn't be returned, instead be stored inside the array nums1. To accommodate this, nums1 has a length of m + n, where the first m elements denote the elements that should be merged, and the last n elements are set to 0 and should be ignored. nums2 has a length of n. """
 
-num1 = list(map(int, input("Enter numbers in your first array spaced by space: ").split()))
-num2 = list(map(int, input("Enter numbers in your second array spaced by space: ").split()))
+nums1 = list(map(int, input("Enter numbers in your first array spaced by space: ").split()))
+nums2 = list(map(int, input("Enter numbers in your second array spaced by space: ").split()))
 
-m = len(num1)
-n = len(num2)
+m = len(nums1)
+n = len(nums2)
 
 print("\nThe arrays you entered and their sizes are: ")
-print("num1: ", num1, "\nm:", m)
-print("num2: ", num2, "\nn:", n)
+print("nums1: ", nums1, "\nm:", m)
+print("nums2: ", nums2, "\nn:", n)
 
 list()
 
@@ -28,13 +28,36 @@ def quick_sort(arr):
     return quick_sort(left) + middle + quick_sort(right) # Recursively applying the same steps to the left and right sub-arrays.
 
 def merge_sorted_array(arr1, arr2):
-    arr1 = quick_sort(quick_sort(arr1) + quick_sort(arr2))
+    arr1 = quick_sort(arr1 + arr2)
     return arr1
 
 
-num1 = merge_sorted_array(num1, num2)
+nums1 = merge_sorted_array(nums1, num2)
 
-print("New num1 array: ", num1)
+print("New nums1 array: ", nums1)
+
+
+# Solution using the three-pointer approach
+def merge(nums1, m, nums2, n):
+    i = m - 1       # Pointer for nums1's actual elements
+    j = n - 1       # Pointer for nums2
+    k = m + n - 1   # Pointer for placement in nums1
+
+    while i >= 0 and j >= 0:
+        if nums1[i] > nums2[j]:
+            nums1[k] = nums1[i]
+            i -= 1
+        else:
+            nums1[k] = nums2[j]
+            j -= 1
+        k -= 1
+
+    while j >= 0:
+        nums1[k] = nums2[j]
+        j -= 1
+        k -= 1
+
+
 
 
 

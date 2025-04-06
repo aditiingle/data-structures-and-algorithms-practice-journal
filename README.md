@@ -1,4 +1,4 @@
-# LeetCode Practice Journal
+# Data Structures and Algorithms Practice Journal
 
 This repository contains my solutions to various LeetCode problems, categorized by difficulty (Easy, Medium, Hard).
 
