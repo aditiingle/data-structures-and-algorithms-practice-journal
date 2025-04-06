@@ -1,9 +1,6 @@
-""" Given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively.
+# Merge two sorted arrays
 
-Merge nums1 and nums2 into a single array sorted in non-decreasing order.
-
-The final sorted array shouldn't be returned, instead be stored inside the array nums1. To accommodate this, nums1 has a length of m + n, where the first m elements denote the elements that should be merged, and the last n elements are set to 0 and should be ignored. nums2 has a length of n. """
-
+# My attempt using Quick Sort O(n log n)
 nums1 = list(map(int, input("Enter numbers in your first array spaced by space: ").split()))
 nums2 = list(map(int, input("Enter numbers in your second array spaced by space: ").split()))
 
@@ -14,10 +11,6 @@ print("\nThe arrays you entered and their sizes are: ")
 print("nums1: ", nums1, "\nm:", m)
 print("nums2: ", nums2, "\nn:", n)
 
-list()
-
-
-# My attempt using Quick Sort O(n log n)
 def quick_sort(arr):
     if len(arr) <= 1: # If array has 1 or 0 elements, it is already sorted.
         return arr

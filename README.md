@@ -1,6 +1,6 @@
 # Data Structures and Algorithms Practice Journal
 
-This repository contains my solutions to various LeetCode problems, categorized by difficulty (Easy, Medium, Hard).
+This repository contains my solutions to Data Structures and Algorithm problems, categorized by difficulty (Easy, Medium, Hard).
 
 ## Folder Structure
 - `easy/`: Problems with easy difficulty.
