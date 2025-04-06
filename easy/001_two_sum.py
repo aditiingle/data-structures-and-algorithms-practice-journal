@@ -11,8 +11,7 @@ int_array = [4, 2, 11, 7, 15]
 target = 19
 array_subset = 5
 
-# Loop through the array
-for i in range(array_subset - 1):
+for i in range(array_subset - 1): # Loop through the array
     for j in range(i + 1, array_subset):
         if int_array[i] + int_array[j] == target:
             print(f"Integers are at indices: {i} and {j}.")
